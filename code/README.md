@@ -8,13 +8,28 @@
 
 This project leverages the following technologies:
 
-- **[NAME](WEBSITE):** One Line on why you chose this tech and what it is used for.
+**[Tesseract OCR](https://github.com/tesseract-ocr/tesseract):** Efficiently extracts text from scanned medical documents, enabling digitization of physical health records.
+
+**[XGBoost](https://xgboost.readthedocs.io/):** Provides accurate predictions on diabetes status, known for its speed and performance in machine learning tasks.
+
+**[SQLite](https://www.sqlite.org/index.html):** Lightweight, file-based database for easy data management, ideal for small to medium-scale applications.
+
+**[Django](https://www.djangoproject.com/):** Manages backend logic, security, and database interactions, ensuring robust and scalable web applications.
+
+**[React.js](https://reactjs.org/):** Builds dynamic and responsive user interfaces, enhancing the user experience with interactive components.
+
+**[Gemini Pro](https://geminipro.ai/):** Offers personalized AI-driven health recommendations, tailoring healthcare insights to individual needs.
+
 
 ## Key Features
 
-- **Feature 1:** One Line description of Feature 1.
-- **Feature 2:** One Line description of Feature 2.
-- **Feature 3:** One Line description of Feature 3.
+- **Real-Time Data Integration:** Seamlessly updates patient information from multiple sources in real-time for accurate monitoring.
+- **Advanced AI Analytics:** Utilizes AI to predict health risks and offer personalized treatment recommendations.
+- **User-Friendly Interface:** Provides an intuitive dashboard for easy navigation and access to essential healthcare tools.
+- **Automated Test Result Processing:** Uses Tesseract OCR to automatically extract and digitize information from uploaded medical documents.
+- **Secure Data Management:** Utilizes SQLite for storing patient and doctor data securely, with Django handling backend operations and data privacy. We do not share any patient data (ID or name) directly with Gemini Pro.
+
+
 
 ## Local Setup Instructions (Write for both windows and macos)
 
