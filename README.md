@@ -19,7 +19,7 @@ This README provides an overview of the project, including team details, relevan
 - **HARSHDIP SAHA** - 2023UCA1897 - [@HARSHDIPSAHA](https://github.com/HARSHDIPSAHA)
 - **AMAN BIHARI** - 2023UCA1910 - [@CODEBREAKER32](https://github.com/CODEBREAKER32)
 
-**PROJECT DESCRIPTION** - This system addresses the inefficiencies in current healthcare diagnostics and management by implementing AI models that can analyze patient data for more accurate and timely diagnosis, offer predictive insights for preventive care. This automation reduces human error, improves decision-making, and enhances patient care.
+**PROJECT DESCRIPTION** - This system addresses the inefficiencies in current healthcare diagnostics and management by implementing AI models that can analyze patient data for more accurate and timely diagnosis, offer predictive insights for preventive care. This automation reduces human error, improves decision-making, and enhances patient care.The project is running fine on local host and the frontend part is deployed.
 
 **TECHNOLOGIES USED** :- <br>
 *1. DJANGO* <br>
