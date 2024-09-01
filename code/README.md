@@ -1,8 +1,8 @@
 ## Tasks Accomplished
 
-- [x] **Patient Management Dashboard:** Description of Task 1 (if needed)
-- [x] **Personalized Treatment Recommendations:** Description of Task 2 (if needed)
-- [x] **AI-Powered Diagnostics:** Description of Task 3 (if needed)
+- [x] **Patient Management Dashboard:**
+- [x] **Personalized Treatment Recommendations:** 
+- [x] **AI-Powered Diagnostics:**
 
 ## Technology Stack
 
