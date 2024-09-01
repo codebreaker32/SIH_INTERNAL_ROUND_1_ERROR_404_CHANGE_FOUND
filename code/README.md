@@ -18,7 +18,7 @@ This project leverages the following technologies:
 
 **[React.js](https://reactjs.org/):** Builds dynamic and responsive user interfaces, enhancing the user experience with interactive components.
 
-**[Gemini Pro](https://geminipro.ai/):** Offers personalized AI-driven health recommendations, tailoring healthcare insights to individual needs.
+**[Gemini Pro](https://deepmind.google/technologies/gemini/pro/):** Offers personalized AI-driven health recommendations, tailoring healthcare insights to individual needs.
 
 
 ## Key Features
