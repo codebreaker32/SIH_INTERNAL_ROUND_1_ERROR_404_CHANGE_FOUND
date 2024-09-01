@@ -28,7 +28,7 @@ This project leverages the following technologies:
 - **User-Friendly Interface:** Provides an intuitive dashboard for easy navigation and access to essential healthcare tools.
 - **Automated Test Result Processing:** Uses Tesseract OCR to automatically extract and digitize information from uploaded medical documents.
 - **Secure Data Management:** Utilizes SQLite for storing patient and doctor data securely, with Django handling backend operations and data privacy. We do not share any patient data (ID or name) directly with Gemini Pro.
-- **Fine-Tuned Chatbot**A NLP chatbot on diabetes data and knowledge that provides personalized support.When user logins, he/she will be able to see a chatbot with which they can interact for diet/exercises in the context of diabetes.
+- **Fine-Tuned Chatbot:** A NLP chatbot on diabetes data and knowledge that provides personalized support.When user logins, he/she will be able to see a chatbot with which they can interact for diet/exercises in the context of diabetes.
 
 
 
