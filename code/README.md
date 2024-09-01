@@ -37,7 +37,7 @@ Follow these steps to run the project locally
 
 1. **Clone the Repository**
    ```bash
-   git clone GITHUB_LINK_TO_THE_REPO
+   git clone https://github.com/codebreaker32/SIH_INTERNAL_ROUND_1_ERROR_404_CHANGE_FOUND
    cd REPO_DIRECTORY
    ```
 
