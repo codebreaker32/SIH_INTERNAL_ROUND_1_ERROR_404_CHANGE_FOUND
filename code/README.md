@@ -42,4 +42,3 @@ Follow these steps to run the project locally
    cd REPO_DIRECTORY
    ```
 
-MORE STEPS HERE
