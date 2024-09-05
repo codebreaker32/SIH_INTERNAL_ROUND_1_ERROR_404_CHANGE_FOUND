@@ -45,10 +45,10 @@ Follow these steps to run the project locally
    ```bash
    follow documentation: https://github.com/tesseract-ocr/tesseract
    ```
-3.**Get your gemini pro api key**
-```bash
-https://ai.google.dev/gemini-api/docs/api-key
- ```
+3. **Get your gemini pro api key**
+   ```bash
+   https://ai.google.dev/gemini-api/docs/api-key
+   ```
 # Django Backend 
 
 This project is a Django-based backend for managing diabetes patient data, providing user authentication, patient data handling, and integration with machine learning models for outcome predictions and recommendations.
