@@ -78,24 +78,33 @@ This project is a Django-based backend for managing diabetes patient data, provi
 ## Setup Instructions
 
 ### 1. Clone the repository
+ ```bash
 git clone <https://github.com/codebreaker32/SIH_INTERNAL_ROUND_1_ERROR_404_CHANGE_FOUND.git>
 cd <HealthCare_BACKEND>
+```
 
 ### 2. Create and activate a virtual environment
+ ```bash
 python3 -m venv venv
-source venv/bin/activate  
+source venv/bin/activate
+``` 
 For Windows, use `venv\Scripts\activate`
 
 ### 3. Install the dependencies
+ ```bash
 pip install -r requirements.txt
-
+```
 ### 4. Setup the Django project (migrate database and create superuser)
+ ```bash
 python manage.py migrate
+```
+ ```bash
 python manage.py createsuperuser
-
+```
 ### 5. Run the server
+ ```bash
 python manage.py runserver
-
+```
 # REACT FRONTEND 
 This project is a React-based frontend for managing diabetes patient data, integrating with a Django backend to provide user interfaces for patient data management, user authentication, and integration with machine learning models.
 
@@ -122,9 +131,10 @@ This project is a React-based frontend for managing diabetes patient data, integ
 ## Setup instructions 
 
 ### 1. Clone the repository 
+```bash
 git clone <https://github.com/codebreaker32/SIH_INTERNAL_ROUND_1_ERROR_404_CHANGE_FOUND.git>
 cd <code>
-
+```
 ### 2. Install the dependencies 
  ```bash
 npm install
