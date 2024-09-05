@@ -70,21 +70,21 @@ This project is a Django-based backend for managing diabetes patient data, provi
 
 ## Setup Instructions
 
-# 1. Clone the repository
+### 1. Clone the repository
 git clone <https://github.com/codebreaker32/SIH_INTERNAL_ROUND_1_ERROR_404_CHANGE_FOUND.git>
 cd <HealthCare_BACKEND>
 
-# 2. Create and activate a virtual environment
+### 2. Create and activate a virtual environment
 python3 -m venv venv
 source venv/bin/activate  
-# For Windows, use `venv\Scripts\activate`
+For Windows, use `venv\Scripts\activate`
 
-# 3. Install the dependencies
+### 3. Install the dependencies
 pip install -r requirements.txt
 
-# 4. Setup the Django project (migrate database and create superuser)
+### 4. Setup the Django project (migrate database and create superuser)
 python manage.py migrate
 python manage.py createsuperuser
 
-# 5. Run the server
+### 5. Run the server
 python manage.py runserver
