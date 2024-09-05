@@ -82,6 +82,7 @@ This project is a Django-based backend for managing diabetes patient data, provi
 ### 1. Clone the repository
  ```bash
 git clone <https://github.com/codebreaker32/SIH_INTERNAL_ROUND_1_ERROR_404_CHANGE_FOUND.git>
+cd<code>
 cd <HealthCare_BACKEND>
 ```
 
