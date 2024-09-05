@@ -95,5 +95,50 @@ python manage.py createsuperuser
 
 ### 5. Run the server
 python manage.py runserver
+
+# REACT FRONTEND 
+This project is a React-based frontend for managing diabetes patient data, integrating with a Django backend to provide user interfaces for patient data management, user authentication, and integration with machine learning models.
+
+## Features
+- User-friendly interface for patient and doctor interactions.
+- Role-based access control views for patients and doctors.
+- Forms for CRUD operations related to diabetes data.
+- Integration with backend APIs for data handling and predictions.
+- Image upload functionality for extracting patient details (doctor-specific).
+- Responsive design for a seamless user experience.
+
+## Technologies Used
+- React: Frontend library for building the user interface.
+- React Router: For routing and navigation within the application.
+- Axios: For making HTTP requests to the backend APIs.
+- Material-UI or Bootstrap: For UI components and styling.
+- Redux: For state management. 
+- React Hook Form: For form handling.
+
+## Prerequisites
+- Node.js (v14.x or later)
+- npm (v6.x or later) or yarn.
+
+## Setup instructions 
+
+### 1. Clone the repository 
+git clone <https://github.com/codebreaker32/SIH_INTERNAL_ROUND_1_ERROR_404_CHANGE_FOUND.git>
+cd <code>
+
+### 2. Install the dependencies 
+npm install
+npm install react-scripts 
+npm install react-router-dom
+
+### 3. Start the development server
+npm start
+
+### 4. 4. Build for production (optional)
+npm run build
+
+
+
+
+
  
 
