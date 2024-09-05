@@ -40,3 +40,51 @@ This README provides an overview of the project, including team details, relevan
 - **Live Deployment:** [View Deployment](https://healthy002.netlify.app/)
 - **Source Code:** [GitHub Repository](https://github.com/codebreaker32/SIH_INTERNAL_ROUND_1_ERROR_404_CHANGE_FOUND)
 
+# Django Backend 
+
+This project is a Django-based backend for managing diabetes patient data, providing user authentication, patient data handling, and integration with machine learning models for outcome predictions and recommendations.
+
+## Features
+- User registration and login with JWT-based authentication.
+- Role-based access control for patients and doctors.
+- CRUD operations for diabetes data.
+- Machine learning-based outcome prediction and health recommendations.
+- Patient details extraction from uploaded images (for doctors).
+- Secure password management and user profile functionality.
+- RESTful APIs using Django Rest Framework (DRF).
+- CORS support.
+
+## Technologies Used
+- **Django**: Backend web framework.
+- **Django REST Framework (DRF)**: To create and handle REST APIs.
+- **JWT (SimpleJWT)**: For token-based user authentication.
+- **Google Generative AI**: Integrated for additional recommendation generation.
+- **OpenCV** and **Tesseract**: For image processing and extracting patient details from images.
+- **XGBoost**: For diabetes prediction models.
+- **Pandas**, **NumPy**, and **Scikit-Learn**: For data manipulation and ML logic.
+  
+## Prerequisites
+
+- Python 3.8+
+- A virtual environment is recommended for project dependencies.
+
+## Setup Instructions
+
+# 1. Clone the repository
+git clone <https://github.com/codebreaker32/SIH_INTERNAL_ROUND_1_ERROR_404_CHANGE_FOUND.git>
+cd <HealthCare_BACKEND>
+
+# 2. Create and activate a virtual environment
+python3 -m venv venv
+source venv/bin/activate  
+# For Windows, use `venv\Scripts\activate`
+
+# 3. Install the dependencies
+pip install -r requirements.txt
+
+# 4. Setup the Django project (migrate database and create superuser)
+python manage.py migrate
+python manage.py createsuperuser
+
+# 5. Run the server
+python manage.py runserver
