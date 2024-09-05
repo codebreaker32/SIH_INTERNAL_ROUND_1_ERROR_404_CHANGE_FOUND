@@ -41,7 +41,7 @@ Follow these steps to run the project locally
    git clone https://github.com/codebreaker32/SIH_INTERNAL_ROUND_1_ERROR_404_CHANGE_FOUND
    cd REPO_DIRECTORY
    ```
-2.**Set up Tesseract ocr**
+2. **Set up Tesseract ocr**
    ```bash
    follow documentation: https://github.com/tesseract-ocr/tesseract
    ```
