@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Login.css'; // Import the CSS file
+import axios from 'axios';
 
 const LoginPage = ({ role }) => {
   const navigate = useNavigate();
@@ -10,28 +11,45 @@ const LoginPage = ({ role }) => {
   const [phoneNo, setPhoneNo] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isSignup, setIsSignup] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleLogin = () => {
-    if (userID && password) {
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post('/api/login/', {
+        username: userID,
+        password: password,
+      });
+      localStorage.setItem('access_token', response.data.token.access);
+      localStorage.setItem('refresh_token', response.data.token.refresh);
       if (role === 'doctor') {
         navigate('/doctor-dashboard');
       } else {
         navigate('/patient-dashboard');
       }
-    } else {
-      alert('Please enter both User ID and Password.');
+    } catch (error) {
+      setError('Username or Password is not Valid');
     }
   };
 
-  const handleSignUp = () => {
+  const handleSignUp = async () => {
     if (password !== confirmPassword) {
       alert('Passwords do not match.');
       return;
     }
     if (firstName && phoneNo && password && confirmPassword) {
-      // Add sign-up logic here
-      alert('Sign-up successful! You can now log in.');
-      setIsSignup(false);
+      try {
+        // Make a POST request to register a new user
+        const response = await axios.post('/api/register/', {
+          username: userID,
+          password: password,
+          first_name: firstName,
+          phone_no: phoneNo,
+        });
+        alert('Sign-up successful! You can now log in.');
+        setIsSignup(false);
+      } catch (error) {
+        setError('Error occurred during sign-up.');
+      }
     } else {
       alert('Please fill out all fields.');
     }
@@ -39,7 +57,10 @@ const LoginPage = ({ role }) => {
 
   return (
     <div className="login-container">
-      <h1 className="login-title">{isSignup ? 'Patient ' : (role === 'doctor' ? 'Doctor' : 'Patient')} {isSignup ? 'Sign Up' : 'Login'}</h1>
+      <h1 className="login-title">
+        {isSignup ? 'Patient ' : (role === 'doctor' ? 'Doctor' : 'Patient')} {isSignup ? 'Sign Up' : 'Login'}
+      </h1>
+      {error && <p className="error-message">{error}</p>}
       {isSignup ? (
         <div className="login-form">
           <input
@@ -54,6 +75,13 @@ const LoginPage = ({ role }) => {
             placeholder="Phone No"
             value={phoneNo}
             onChange={(e) => setPhoneNo(e.target.value)}
+            className="login-input"
+          />
+          <input
+            type="text"
+            placeholder="User ID"
+            value={userID}
+            onChange={(e) => setUserID(e.target.value)}
             className="login-input"
           />
           <input

@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import axios from 'axios'; // Import axios for making HTTP requests
 import './doctordash.css';
 
 const DoctorDashboard = () => {
   const [patientID, setPatientID] = useState('');
   const [patientName, setPatientName] = useState('');
-  const [uploadType, setUploadType] = useState(''); // To track whether the doctor is uploading or entering details manually
+  const [uploadType, setUploadType] = useState('');
   const [prescriptionFile, setPrescriptionFile] = useState(null);
   const [prescriptionDetails, setPrescriptionDetails] = useState({
     pregnancies: '',
@@ -15,9 +16,9 @@ const DoctorDashboard = () => {
     bmi: '',
     diabetesPedigreeFunction: '',
     age: '',
-   /* outcome: '' */
   });
-  const [patientFound, setPatientFound] = useState(false); // To track if a patient is found
+  const [patientFound, setPatientFound] = useState(false);
+  const [token, setToken] = useState(localStorage.getItem('access_token')); // Retrieve token from local storage
 
   const handleFileUpload = (e) => {
     setPrescriptionFile(e.target.files[0]);
@@ -31,31 +32,48 @@ const DoctorDashboard = () => {
     }));
   };
 
-  const handlePatientSearch = () => {
-    // Mock API call to fetch patient details based on patientID
-    // Replace this with actual API call
-    const mockPatientData = {
-      patientID: 'DMZXXT',
-      patientName: 'Hemank'
-    };
-    setPatientName(mockPatientData.patientName);
-    setPatientFound(true);
-
-   /* if (patientID === mockPatientData.patientID) {
-      setPatientName(mockPatientData.patientName);
+  const handlePatientSearch = async () => {
+    try {
+      const response = await axios.get(`/api/patients/${patientID}/`, {
+        headers: {
+          Authorization: `Bearer ${token}` // Include token in the request header
+        }
+      });
+      setPatientName(response.data.username); // Adjust according to your actual response structure
       setPatientFound(true);
-    } else {
+    } catch (error) {
       alert('Patient not found. Please check the Patient ID.');
       setPatientFound(false);
       setPatientName('');
-    } */
+    }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (uploadType === 'file' && prescriptionFile) {
-      alert(`Test Results for ${patientName} uploaded successfully.`);
+      const formData = new FormData();
+      formData.append('image', prescriptionFile);
+      try {
+        await axios.post(`/api/patients/`, formData, {
+          headers: {
+            'Content-Type': 'multipart/form-data',
+            Authorization: `Bearer ${token}` // Include token in the request header
+          }
+        });
+        alert(`Test Results for ${patientName} uploaded successfully.`);
+      } catch (error) {
+        alert('Failed to upload test results.');
+      }
     } else if (uploadType === 'manual' && Object.values(prescriptionDetails).every(detail => detail)) {
-      alert(`Test results for ${patientName} entered successfully.`);
+      try {
+        await axios.post(`/api/patients/`, prescriptionDetails, {
+          headers: {
+            Authorization: `Bearer ${token}` // Include token in the request header
+          }
+        });
+        alert(`Test results for ${patientName} entered successfully.`);
+      } catch (error) {
+        alert('Failed to enter test results.');
+      }
     } else {
       alert('Please complete the form.');
     }
@@ -74,7 +92,6 @@ const DoctorDashboard = () => {
       bmi: '',
       diabetesPedigreeFunction: '',
       age: '',
-    /*  outcome: '' */
     });
     setPatientFound(false);
   };
