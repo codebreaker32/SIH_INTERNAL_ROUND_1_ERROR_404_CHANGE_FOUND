@@ -70,7 +70,7 @@ This project is a Django-based backend for managing diabetes patient data, provi
 - **Google Generative AI**: Integrated for additional recommendation generation.
 - **OpenCV** and **Tesseract**: For image processing and extracting patient details from images.
 - **XGBoost**: For diabetes prediction models.
-- **Pandas**, **NumPy**, and **Scikit-Learn**: For data manipulation and ML logic.
+- **Pandas**, **NumPy**, and **Scikit-Learn**: For data manipulation and ML logic. 
   
 ## Prerequisites
 
