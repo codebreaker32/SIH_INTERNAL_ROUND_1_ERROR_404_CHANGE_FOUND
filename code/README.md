@@ -45,8 +45,10 @@ Follow these steps to run the project locally
    ```bash
    follow documentation: https://github.com/tesseract-ocr/tesseract
    ```
-
-
+3. **Get your gemini pro api key**
+   ```bash
+   https://ai.google.dev/gemini-api/docs/api-key
+   ```
 # Django Backend 
 
 This project is a Django-based backend for managing diabetes patient data, providing user authentication, patient data handling, and integration with machine learning models for outcome predictions and recommendations.
@@ -68,7 +70,7 @@ This project is a Django-based backend for managing diabetes patient data, provi
 - **Google Generative AI**: Integrated for additional recommendation generation.
 - **OpenCV** and **Tesseract**: For image processing and extracting patient details from images.
 - **XGBoost**: For diabetes prediction models.
-- **Pandas**, **NumPy**, and **Scikit-Learn**: For data manipulation and ML logic.
+- **Pandas**, **NumPy**, and **Scikit-Learn**: For data manipulation and ML logic. 
   
 ## Prerequisites
 
@@ -78,24 +80,33 @@ This project is a Django-based backend for managing diabetes patient data, provi
 ## Setup Instructions
 
 ### 1. Clone the repository
+ ```bash
 git clone <https://github.com/codebreaker32/SIH_INTERNAL_ROUND_1_ERROR_404_CHANGE_FOUND.git>
 cd <HealthCare_BACKEND>
+```
 
 ### 2. Create and activate a virtual environment
+ ```bash
 python3 -m venv venv
-source venv/bin/activate  
+source venv/bin/activate
+``` 
 For Windows, use `venv\Scripts\activate`
 
 ### 3. Install the dependencies
+ ```bash
 pip install -r requirements.txt
-
+```
 ### 4. Setup the Django project (migrate database and create superuser)
+ ```bash
 python manage.py migrate
+```
+ ```bash
 python manage.py createsuperuser
-
+```
 ### 5. Run the server
+ ```bash
 python manage.py runserver
-
+```
 # REACT FRONTEND 
 This project is a React-based frontend for managing diabetes patient data, integrating with a Django backend to provide user interfaces for patient data management, user authentication, and integration with machine learning models.
 
@@ -122,20 +133,24 @@ This project is a React-based frontend for managing diabetes patient data, integ
 ## Setup instructions 
 
 ### 1. Clone the repository 
+```bash
 git clone <https://github.com/codebreaker32/SIH_INTERNAL_ROUND_1_ERROR_404_CHANGE_FOUND.git>
 cd <code>
-
+```
 ### 2. Install the dependencies 
+ ```bash
 npm install
 npm install react-scripts 
 npm install react-router-dom
-
+```
 ### 3. Start the development server
+ ```bash
 npm start
-
+```
 ### 4. 4. Build for production (optional)
+ ```bash
 npm run build
-
+```
 
 
 
