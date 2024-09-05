@@ -126,16 +126,19 @@ git clone <https://github.com/codebreaker32/SIH_INTERNAL_ROUND_1_ERROR_404_CHANG
 cd <code>
 
 ### 2. Install the dependencies 
+ ```bash
 npm install
 npm install react-scripts 
 npm install react-router-dom
-
+```
 ### 3. Start the development server
+ ```bash
 npm start
-
+```
 ### 4. 4. Build for production (optional)
+ ```bash
 npm run build
-
+```
 
 
 
