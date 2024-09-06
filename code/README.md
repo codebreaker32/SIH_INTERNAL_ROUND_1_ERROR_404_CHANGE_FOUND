@@ -148,7 +148,7 @@ npm install react-router-dom
  ```bash
 npm start
 ```
-### 4. 4. Build for production (optional)
+### 4. Build for production (optional)
  ```bash
 npm run build
 ```
