@@ -13,7 +13,7 @@ last_row = data.iloc[-1, :].values.reshape(1, -1)
 
 prediction = model.predict(last_row)
 
-genai.configure(api_key="AIzaSyCOll-1nURu72Fv-XMKNx0txTb7J77y5cE")
+genai.configure(api_key=" ")
 
 model = genai.GenerativeModel('gemini-pro')
 
