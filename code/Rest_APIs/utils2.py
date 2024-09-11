@@ -8,7 +8,7 @@ file_path = os.path.join(current_dir, '..', 'Rest_APIs', 'diabetes_xgb.pkl')
 with open(file_path, 'rb') as file:
     model = pickle.load(file)
 
-genai.configure(api_key="AIzaSyCOll-1nURu72Fv-XMKNx0txTb7J77y5cE")
+genai.configure(api_key="")
 
 safety_settings = [
     SafetySettingDict(category="HARM_CATEGORY_DANGEROUS", threshold="BLOCK_NONE"),
